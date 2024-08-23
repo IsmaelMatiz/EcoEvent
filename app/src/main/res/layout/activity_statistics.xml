@@ -1,0 +1,73 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estadísticas de Reciclaje"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!--
+    <com.anychart.AnyChartView
+        android:id="@+id/any_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />-->
+
+    <!--Category Id-->
+    <Spinner
+        android:id="@+id/category_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/cities_array"
+        />
+
+    <!--Event Id-->
+    <Spinner
+        android:id="@+id/event_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/event_types_array" />
+
+    <EditText
+        android:id="@+id/quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Objetivo del Evento"
+        android:background="@drawable/custom_edit_text_bg"
+        android:padding="10dp"
+        android:textColorHint="#878787"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/calendar_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Fecha"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/ecoBlue"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/goto_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Tips"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/ecoBlue"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_marginTop="40dp"/>
+
+</LinearLayout>

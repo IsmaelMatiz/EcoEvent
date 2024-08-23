@@ -1,0 +1,89 @@
+<!-- res/layout/activity_main.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/event_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del Evento"
+            android:background="@drawable/custom_edit_text_bg"
+            android:padding="10dp"
+            android:textColorHint="#878787"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/auxiliary_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cantidad de Auxiliares"
+            android:inputType="number"
+            android:background="@drawable/custom_edit_text_bg"
+            android:padding="10dp"
+            android:textColorHint="#878787"
+            android:layout_marginTop="15dp"/>
+
+        <!--Ciudad-->
+        <Spinner
+            android:id="@+id/city_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/cities_array"
+        />
+
+        <!--tipo de evento-->
+        <Spinner
+            android:id="@+id/event_type_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/event_types_array" />
+
+        <EditText
+            android:id="@+id/event_goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Objetivo del Evento"
+            android:background="@drawable/custom_edit_text_bg"
+            android:padding="10dp"
+            android:textColorHint="#878787"
+            android:layout_marginTop="15dp"/>
+
+        <!--target completes 0, 1, 2-->
+        <Spinner
+            android:id="@+id/target_completed_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/event_types_array" />
+
+        <Button
+            android:id="@+id/calendar_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Fecha"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/ecoBlue"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_marginTop="40dp"/>
+
+        <Button
+            android:id="@+id/save_event_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Evento"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/ecoBlue"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:layout_marginTop="40dp"/>
+    </LinearLayout>
+</ScrollView>

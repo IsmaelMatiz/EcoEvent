@@ -1,0 +1,35 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/mensajeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido!"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/iniciarSesionButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesión"
+        android:backgroundTint="@color/ecoGreen"/>
+
+    <Button
+        android:id="@+id/uneteButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Únete"
+        android:backgroundTint="@color/ecoBlue"/>
+</LinearLayout>

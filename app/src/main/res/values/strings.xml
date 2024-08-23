@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Event Manager</string>
+    <string-array name="cities_array">
+        <item>Bogotá</item>
+        <item>Medellín</item>
+        <item>Cali</item>
+        <item>Cartagena</item>
+    </string-array>
+    <string-array name="event_types_array">
+        <item>Conferencia</item>
+        <item>Taller</item>
+        <item>Seminario</item>
+        <item>Concierto</item>
+    </string-array>
+</resources>

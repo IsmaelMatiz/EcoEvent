@@ -1,0 +1,108 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="151dp"
+        android:layout_height="180dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cleanearth"
+        android:textSize="72sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="15dp">
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/company_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Somos una empresa de servicios de limpieza
+ecológica llamada Clean Earth educa a las
+personas sobre la necesidad de mantener
+limpios los hogares, los lugares de trabajo y la
+sociedad. He diseñado la tierra con la intención
+de hacerla verde.
+"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En nuestra app podras hacer seguimiento de los elementos reciclado en
+diferentes eventos, podras llevar un control y seguimiento de cuanto se ha reciclado de que materiales
+y filtralo por las categorias y eventos."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explora nuestra diferentes opciones!"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/event_button"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Registra eventos"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:backgroundTint="@color/ecoBlue"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:layout_marginTop="40dp"/>
+            <Button
+                android:id="@+id/category_button"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Registra Categorias"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:backgroundTint="@color/ecoBlue"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:layout_marginTop="40dp"/>
+
+            <Button
+                android:id="@+id/statistics_button"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Estadisticas"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:backgroundTint="@color/ecoBlue"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:layout_marginTop="40dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

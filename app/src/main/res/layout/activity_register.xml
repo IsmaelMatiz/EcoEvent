@@ -1,0 +1,104 @@
+<!-- res/layout/activity_register.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombres y Apellidos"
+        android:background="@drawable/custom_edit_text_bg"
+        android:padding="10dp"
+        android:textColorHint="#878787"
+        android:layout_marginTop="15dp"/>
+
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo Electrónico"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/custom_edit_text_bg"
+        android:padding="10dp"
+        android:textColorHint="#878787"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:background="@drawable/custom_edit_text_bg"
+        android:padding="10dp"
+        android:textColorHint="#878787"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirma Contraseña"
+        android:inputType="textPassword"
+        android:background="@drawable/custom_edit_text_bg"
+        android:padding="10dp"
+        android:textColorHint="#878787"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/security_question_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pregunta de seguridad 1"
+        android:background="@drawable/custom_edit_text_bg"
+        android:padding="10dp"
+        android:textColorHint="#878787"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/security_answer_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Respuesta de seguridad 1"
+        android:background="@drawable/custom_edit_text_bg"
+        android:padding="10dp"
+        android:textColorHint="#878787"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/security_question_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pregunta de seguridad 2"
+        android:background="@drawable/custom_edit_text_bg"
+        android:padding="10dp"
+        android:textColorHint="#878787"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/security_answer_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Respuesta de seguridad 2"
+        android:background="@drawable/custom_edit_text_bg"
+        android:padding="10dp"
+        android:textColorHint="#878787"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Únete"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/ecoBlue"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_marginTop="80dp"/>
+</LinearLayout>

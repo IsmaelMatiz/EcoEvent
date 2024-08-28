@@ -10,11 +10,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.training.retojhonf.Model.DatabaseHelper;
+import com.training.retojhonf.Model.Entities.Users.DAOUser;
 import com.training.retojhonf.R;
 
 public class LoginActivity extends AppCompatActivity {
-    DatabaseHelper db;
+    DAOUser dao;
     EditText username, password;
     Button loginButton;
 
@@ -23,9 +23,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_login);
 
-        db = new DatabaseHelper(this);
-        username = findViewById(R.id.username);
-        password = findViewById(R.id.password);
+        dao = new DAOUser(this);
+        username = findViewById(R.id.inp_email);
+        password = findViewById(R.id.inp_password);
         loginButton = findViewById(R.id.login_button);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -34,14 +34,21 @@ public class LoginActivity extends AppCompatActivity {
                 String user = username.getText().toString().trim();
                 String pass = password.getText().toString().trim();
 
-                if (db.checkUser(user, pass)) {
-                    Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    // Redirigir a otra actividad
-                    Intent intent = new Intent(LoginActivity.this, Home_in.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                switch (dao.authenticateUser(user,pass))
+                {
+                    case 0:
+                        Toast.makeText(LoginActivity.this, "Ingreso exitoso", Toast.LENGTH_SHORT).show();
+                        // Redirigir a otra actividad
+                        Intent intent = new Intent(LoginActivity.this, Home_in.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Toast.makeText(LoginActivity.this, "Ingreso fallido email incorrecto", Toast.LENGTH_SHORT).show();
+                    default:
+                        Toast.makeText(LoginActivity.this, "Ingreso fallido clave incorrecta", Toast.LENGTH_SHORT).show();
                 }
+
+
             }
         });
     }

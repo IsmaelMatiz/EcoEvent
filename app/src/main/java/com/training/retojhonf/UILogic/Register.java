@@ -2,6 +2,7 @@ package com.training.retojhonf.UILogic;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,17 +14,22 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.training.retojhonf.Model.Entities.Users.DAOUser;
+import com.training.retojhonf.Model.Entities.Users.DTOUser;
 import com.training.retojhonf.R;
 
 public class Register extends AppCompatActivity {
 
     EditText fullname, email, password, confirmPass, securityQuetion1, answerQ1,securityQuetion2, answerQ2;
     Button registerButton;
+    DAOUser dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        dao = new DAOUser(this);
 
         fullname = findViewById(R.id.etName);
         email = findViewById(R.id.etEmail);
@@ -38,9 +44,28 @@ public class Register extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Aquí puedes agregar la lógica para registrar al usuario en tu base de datos
-                Toast.makeText(Register.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
+                Log.i("debugEconEvent", "pass = "+ password.getText().toString()
+                        + " confirm = "+ confirmPass.getText().toString());
 
+                if (!password.getText().toString().equals(confirmPass.getText().toString()))
+                {
+                    Toast.makeText(Register.this, "Contraseñas no coinciden intentalo de nuevo", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                DTOUser userInfo = new DTOUser(
+                        fullname.getText().toString(),
+                        email.getText().toString(),
+                        password.getText().toString(),
+                        securityQuetion1.getText().toString(),
+                        answerQ1.getText().toString(),
+                        securityQuetion2.getText().toString(),
+                        answerQ2.getText().toString()
+                );
+
+                dao.insertUser(userInfo);
+
+                Toast.makeText(Register.this, "Usuario registrado exitosamente", Toast.LENGTH_SHORT).show();
                 Intent goToHome = new Intent(Register.this,Home_out.class);
                 startActivity(goToHome);
             }
